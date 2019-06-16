@@ -1,7 +1,6 @@
 package com.wan.generic;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -22,7 +21,7 @@ public class Wildcard {
         getData(s1);
         getData2(s1);
 
-        //System.out.println(numElementsInCommon(s1, s2));
+        System.out.println(numElementsInCommon(s1, s2));
     }
 
     static void getData(Set<?> set) {
@@ -37,9 +36,7 @@ public class Wildcard {
         }
     }
 
-    static int numElementsInCommon(Set<?> s1, Set<?> s2) {
-        /*不能add
-        s2.add(12);*/
+    static <E,T> int numElementsInCommon(Set<E> s1, Set<T> s2) {
         int result = 0;
         for (Object o1 : s1) {
             if (s2.contains(o1)) {
@@ -49,8 +46,15 @@ public class Wildcard {
         return result;
     }
 
-    static <E> void swapHelper(List<E> list, int i, int j) {
-
+    static int numElementsInCommon2(Set s1, Set s2) {
+        s1.add(new Object());
+        int result = 0;
+        for (Object o1 : s1) {
+            if (s2.contains(o1)) {
+                result++;
+            }
+        }
+        return result;
     }
 
 
