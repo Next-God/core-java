@@ -1,14 +1,13 @@
 package com.wan.generic;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 通配符类型
  */
 public class Wildcard {
     public static void main(String[] args) {
-        Set<String> s1 = new HashSet<>();
+        /*Set<String> s1 = new HashSet<>();
         s1.add("123");
         s1.add("22");
         s1.add("31");
@@ -21,7 +20,17 @@ public class Wildcard {
         getData(s1);
         getData2(s1);
 
-        System.out.println(numElementsInCommon(s1, s2));
+        System.out.println(numElementsInCommon(s1, s2));*/
+
+        List<String> strList = Arrays.asList("a", "b", "c");
+        List<Integer> intList = Arrays.asList(1, 2, 3);
+        testList(strList);
+        testList(intList);
+
+    }
+
+    static <T> T returnByParam(T t) {
+        return t;
     }
 
     static void getData(Set<?> set) {
@@ -55,6 +64,11 @@ public class Wildcard {
             }
         }
         return result;
+    }
+
+    public static <E> void testList(List<E> list){
+        
+        list.forEach(System.out::println);
     }
 
 
