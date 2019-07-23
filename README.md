@@ -1,3 +1,2 @@
 # core-java
-local edit
-local eee
+remote 755
