@@ -1,2 +1,2 @@
 # core-java
-remote aaa
+local edit
