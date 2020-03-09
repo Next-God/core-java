@@ -4,3 +4,4 @@ target/
 *.iml
 .idea/
 /.idea/
+!/.idea/encodings.xml
