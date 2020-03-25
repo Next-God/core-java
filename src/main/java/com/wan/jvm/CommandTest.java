@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class CommandTest {
     public static void main(String[] args) {
         while (true) {
-            System.out.println(123);
+            byte[] a = new byte[1024];
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
