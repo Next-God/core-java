@@ -13,7 +13,7 @@ public class BubbleSort extends AbstractSort {
 
             // 这里的两个取值要注意下
             for (int j = i + 1; j < length - i - 1; j++) {
-                if (array[i] > array[j]) swap(i, j);
+                if (arr[i] > arr[j]) swap(i, j);
             }
         }
 

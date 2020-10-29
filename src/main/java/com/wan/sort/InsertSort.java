@@ -6,16 +6,16 @@ package com.wan.sort;
 public class InsertSort extends AbstractSort {
     public static void main(String[] args) {
         for (int i = 1; i < length; i++) {
-            int value = array[i];
+            int value = arr[i];
             int j = i - 1;
             for (; j >=0; j--) {
-                if (array[j] > value) {
-                    array[j+1] = array[j];
+                if (arr[j] > value) {
+                    arr[j+1] = arr[j];
                 } else {
                     break;
                 }
             }
-            array[j+1] = value;
+            arr[j+1] = value;
         }
 
         print();
